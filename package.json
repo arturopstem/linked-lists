@@ -1,0 +1,24 @@
+{
+  "name": "linked-lists",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node -- src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.3",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.3",
+    "eslint": "^8.53.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
