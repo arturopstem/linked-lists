@@ -16,13 +16,7 @@ const linkedListMethods = {
   },
 
   prepend(value) {
-    if (this.listHead === null) {
-      this.listHead = createNode(value);
-    } else {
-      const node = createNode(value);
-      node.nextNode = this.listHead;
-      this.listHead = node;
-    }
+    this.listHead = createNode(value, this.listHead);
   },
 
   size() {
