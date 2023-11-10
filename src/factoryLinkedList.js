@@ -109,6 +109,41 @@ const linkedListMethods = {
     str += 'null';
     return str;
   },
+
+  insertAt(value, index) {
+    let previous;
+    let pointer = this.listHead;
+    let i = 0;
+    while (pointer !== null && i < index) {
+      if (pointer.nextNode === null && i !== index - 1) {
+        pointer.nextNode = createNode();
+      }
+      previous = pointer;
+      pointer = pointer.nextNode;
+      i += 1;
+    }
+    if (previous !== undefined && index > 0) {
+      previous.nextNode = createNode(value, pointer);
+    } else {
+      this.listHead = createNode(value, this.listHead);
+    }
+  },
+
+  removeAt(index) {
+    let previous;
+    let pointer = this.listHead;
+    let i = 0;
+    while (pointer !== null && i < index) {
+      previous = pointer;
+      pointer = pointer.nextNode;
+      i += 1;
+    }
+    if (previous !== undefined && pointer !== null) {
+      previous.nextNode = pointer.nextNode;
+    } else if (previous === undefined) {
+      this.listHead = this.listHead.nextNode;
+    }
+  },
 };
 
 function createLinkedList() {
